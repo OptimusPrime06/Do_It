@@ -6,6 +6,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { EnvKeys } from './common/env.keys';
 import { TaskModule } from './Tasks/task.module';
 import { AuthModule } from './Auth/auth.module';
+import { UserModule } from './User/user.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AuthModule } from './Auth/auth.module';
       }),
     }),
     AuthModule,
+    UserModule,
     TaskModule
   ],
   controllers: [AppController],
