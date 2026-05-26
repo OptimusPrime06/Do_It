@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { EnvKeys } from './common/env.keys';
+import { TaskModule } from './Tasks/task.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { EnvKeys } from './common/env.keys';
         synchronize: true,       
       }),
     }),
+    TaskModule
   ],
   controllers: [AppController],
   providers: [AppService],
