@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { EnvKeys } from './common/env.keys';
 import { TaskModule } from './Tasks/task.module';
+import { AuthModule } from './Auth/auth.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { TaskModule } from './Tasks/task.module';
         synchronize: true,       
       }),
     }),
+    AuthModule,
     TaskModule
   ],
   controllers: [AppController],
